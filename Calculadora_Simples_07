@@ -1,0 +1,88 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "# 🧮 Calculadora bem simples\n",
+        "\n",
+        "# Loop infinito (roda até o usuário escolher sair)\n",
+        "while True:\n",
+        "\n",
+        "    # Mostra o menu de opções\n",
+        "    print(\"\\n1-Somar  2-Subtrair  3-Multiplicar  4-Dividir  5-Sair\")\n",
+        "\n",
+        "    # Lê a opção escolhida pelo usuário\n",
+        "    op = input(\"Escolha: \")\n",
+        "\n",
+        "    # Se o usuário escolher sair, encerra o programa\n",
+        "    if op == \"5\":\n",
+        "        break\n",
+        "\n",
+        "    # Pede os dois números e converte para float (número com casas decimais)\n",
+        "    a = float(input(\"Primeiro número: \"))\n",
+        "    b = float(input(\"Segundo número: \"))\n",
+        "\n",
+        "    # Verifica qual operação foi escolhida\n",
+        "    if op == \"1\":\n",
+        "        # Soma\n",
+        "        print(\"Resultado:\", a + b)\n",
+        "\n",
+        "    elif op == \"2\":\n",
+        "        # Subtração\n",
+        "        print(\"Resultado:\", a - b)\n",
+        "\n",
+        "    elif op == \"3\":\n",
+        "        # Multiplicação\n",
+        "        print(\"Resultado:\", a * b)\n",
+        "\n",
+        "    elif op == \"4\":\n",
+        "        # Divisão (com verificação de erro)\n",
+        "        if b != 0:\n",
+        "            print(\"Resultado:\", a / b)\n",
+        "        else:\n",
+        "            print(\"Erro: divisão por zero\")\n",
+        "\n",
+        "    else:\n",
+        "        # Caso a opção não seja válida\n",
+        "        print(\"Opção inválida\")"
+      ],
+      "metadata": {
+        "id": "B7Fh6NqGrRvZ",
+        "outputId": "32bd5b63-9316-4ed1-cc2a-5435c8696e52",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "1-Somar  2-Subtrair  3-Multiplicar  4-Dividir  5-Sair\n",
+            "Escolha: 3\n",
+            "Primeiro número: 5\n",
+            "Segundo número: 2\n",
+            "Resultado: 10.0\n",
+            "\n",
+            "1-Somar  2-Subtrair  3-Multiplicar  4-Dividir  5-Sair\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Conheça o Colab",
+      "toc_visible": true,
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
