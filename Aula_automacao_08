@@ -1,0 +1,66 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/7guilhermetrindade/engenharia_de_prompt_aplicacoes_AI/blob/main/Aula_automacao_08\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random # Importa o módulo 'random' para gerar números aleatórios\n",
+        "\n",
+        "def verificar_temperatura():\n",
+        "    # Esta função verifica a temperatura de um sistema.\n",
+        "    # Permite ao usuário digitar a temperatura.\n",
+        "\n",
+        "    while True:\n",
+        "        try:\n",
+        "            # Solicita ao usuário que digite a temperatura atual.\n",
+        "            temperatura_str = input(\"Digite a temperatura atual do sistema em Celsius: \")\n",
+        "            temperatura_atual = float(temperatura_str)\n",
+        "            break # Sai do loop se a entrada for um número válido\n",
+        "        except ValueError:\n",
+        "            print(\"Entrada inválida. Por favor, digite um número para a temperatura.\")\n",
+        "\n",
+        "    # Imprime a temperatura atual formatada com duas casas decimais.\n",
+        "    print(\"Temperatura atual do sistema: \" + str(round(temperatura_atual, 2)) + \"°C\")\n",
+        "\n",
+        "    # Verifica se a temperatura atual excede o limite de 30°C.\n",
+        "    if temperatura_atual > 30:\n",
+        "        # Se a temperatura for maior que 30°C, exibe um alerta de superaquecimento.\n",
+        "        print(\"ALERTA: Superaquecimento detectado! Temperatura acima de 30°C.\")\n",
+        "    else:\n",
+        "        # Caso contrário, informa que a temperatura do sistema está normal.\n",
+        "        print(\"Temperatura do sistema está normal.\")\n",
+        "\n",
+        "# Chama a função para executar a verificação da temperatura.\n",
+        "verificar_temperatura()\n"
+      ],
+      "metadata": {
+        "id": "1Wa3cvXDy26R"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Conheça o Colab",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
